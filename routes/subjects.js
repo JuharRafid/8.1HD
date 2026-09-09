@@ -48,9 +48,10 @@ router.get('/', ensureAuthenticated, async (req, res) => {
 
 
     res.render('subjects', {
-      subjects,
-      tasksBySubject
-    });
+  subjects,
+  tasksBySubject,
+  user: req.user
+});
 
   } catch (err) {
 
